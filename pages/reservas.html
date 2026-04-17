@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reserva tu pista de bowling en Bolera Center Strike, Vilagarcía de Arousa.">
+  <title>Reservas | Bolera Center Strike</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <div class="logo-icon">🎳</div>
+        <h1>Bolera Center <span>Strike</span></h1>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item has-dropdown">
+          <a href="actividades.html" class="nav-link">Actividades</a>
+          <div class="dropdown">
+            <a href="bowling.html">🎳 Bowling</a>
+            <a href="maquinas-recreativas.html">🕹️ Máquinas Recreativas</a>
+            <a href="zona-infantil.html">👶 Zona Infantil</a>
+          </div>
+        </li>
+        <li class="nav-item has-dropdown">
+          <a href="eventos.html" class="nav-link">Eventos</a>
+          <div class="dropdown"><a href="cumpleanos.html">🎂 Cumpleaños</a></div>
+        </li>
+        <li class="nav-item"><a href="carta.html" class="nav-link">Nuestra Carta</a></li>
+        <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+        <li class="nav-item"><a href="reservas.html" class="nav-link nav-cta active">Reservas</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero page-hero" style="background-image: url('https://images.unsplash.com/photo-1504025468847-0e438279542c?w=1920&q=80');">
+    <div class="hero-content">
+      <h1>🎳 <span>Reservas</span></h1>
+      <h2>Reserva tu pista de bowling y no te quedes sin plan</h2>
+    </div>
+  </section>
+
+  <!-- FORMULARIO DE RESERVA -->
+  <section>
+    <div class="container">
+      <div style="max-width:700px; margin:0 auto;">
+        <div class="section-header animate-on-scroll">
+          <h2>Reserva tu pista</h2>
+          <p class="subtitle">Rellena el formulario y nos pondremos en contacto contigo para confirmar tu reserva.</p>
+          <div class="line"></div>
+        </div>
+
+        <div class="contact-form animate-on-scroll">
+          <form id="reservaForm" onsubmit="return handleReservaForm(event)">
+            <div class="form-group">
+              <label for="r-nombre">Nombre completo *</label>
+              <input type="text" id="r-nombre" name="nombre" required placeholder="Tu nombre completo">
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+              <div class="form-group">
+                <label for="r-email">Email *</label>
+                <input type="email" id="r-email" name="email" required placeholder="tu@email.com">
+              </div>
+              <div class="form-group">
+                <label for="r-telefono">Teléfono *</label>
+                <input type="tel" id="r-telefono" name="telefono" required placeholder="+34 600 000 000">
+              </div>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+              <div class="form-group">
+                <label for="r-fecha">Fecha *</label>
+                <input type="date" id="r-fecha" name="fecha" required>
+              </div>
+              <div class="form-group">
+                <label for="r-hora">Hora *</label>
+                <select id="r-hora" name="hora" required>
+                  <option value="">Selecciona hora</option>
+                  <option value="16:00">16:00</option>
+                  <option value="16:30">16:30</option>
+                  <option value="17:00">17:00</option>
+                  <option value="17:30">17:30</option>
+                  <option value="18:00">18:00</option>
+                  <option value="18:30">18:30</option>
+                  <option value="19:00">19:00</option>
+                  <option value="19:30">19:30</option>
+                  <option value="20:00">20:00</option>
+                  <option value="20:30">20:30</option>
+                  <option value="21:00">21:00</option>
+                  <option value="21:30">21:30</option>
+                  <option value="22:00">22:00</option>
+                  <option value="22:30">22:30</option>
+                  <option value="23:00">23:00</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="r-personas">Número de personas *</label>
+              <select id="r-personas" name="personas" required>
+                <option value="">¿Cuántas personas?</option>
+                <option value="1-2">1-2 personas</option>
+                <option value="3-4">3-4 personas</option>
+                <option value="5-6">5-6 personas</option>
+                <option value="7+">7 o más personas</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="r-comentarios">Comentarios</label>
+              <textarea id="r-comentarios" name="comentarios" placeholder="¿Necesitas barreras para niños? ¿Alguna petición especial?"></textarea>
+            </div>
+            <div style="margin-bottom:20px;">
+              <label style="display:flex; gap:10px; align-items:flex-start; font-size:0.85rem; color:#666; cursor:pointer;">
+                <input type="checkbox" required style="margin-top:3px;">
+                <span>Acepto el tratamiento de mis datos personales por parte de Bolera Strike S.L. con la finalidad de gestionar mi reserva, conforme a la normativa RGPD vigente.</span>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">Confirmar Reserva</button>
+          </form>
+          <div id="reservaSuccess" style="display:none; text-align:center; padding:30px;">
+            <div style="font-size:3rem; margin-bottom:16px;">🎳</div>
+            <h3 style="color:var(--azul-primario);">¡Reserva recibida!</h3>
+            <p style="color:#555; margin-top:8px;">Nos pondremos en contacto contigo para confirmar tu reserva.</p>
+          </div>
+        </div>
+
+        <!-- CUMPLEAÑOS LINK -->
+        <div class="text-center mt-40 animate-on-scroll">
+          <p style="color:#555; margin-bottom:16px;">¿Buscas reservar una fiesta de cumpleaños?</p>
+          <a href="reserva-cumpleanos.html" class="btn btn-naranja">Reservar Cumpleaños</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TÉRMINOS LEGALES -->
+  <section class="bg-gris">
+    <div class="container">
+      <div class="legal-text animate-on-scroll" style="max-width:700px; margin:0 auto;">
+        <h4>Protección de Datos</h4>
+        <p>De conformidad con las normativas de protección de datos personales, el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016 (RGPD) y la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales, le informamos que los datos personales proporcionados serán tratados por <strong>Bolera Strike S.L.</strong> con la finalidad de gestionar su reserva.</p>
+        <p style="margin-top:8px;">Puede ejercer sus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad de datos dirigiéndose a: <strong>bolerastrike_vga@hotmail.com</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>🎳 Bolera Center Strike</h3>
+          <p>Bolera, cafetería y bocatería en Vilagarcía de Arousa.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/34609665395" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="contacto.html"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="bowling.html">Bowling</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="carta.html">Nuestra Carta</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Contacto</h4>
+          <div class="footer-contact-info">
+            <p>📍 Pza. da Constitución, 15 Bajo</p>
+            <p>📍 36600 Vilagarcía de Arousa</p>
+            <p>📱 +34 609 665 395</p>
+            <p>📞 986 509 720</p>
+            <p>✉️ bolerastrike_vga@hotmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container"><p>©2024 Copyright: Bolera Center Strike por Brais Pérez Gómez</p></div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
