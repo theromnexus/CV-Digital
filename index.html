@@ -3,40 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | Brais Pérez Gómez CV</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Brais Pérez Gómez | Portfolio</title>
+    <!-- Google Fonts: Lora (títulos) y Nunito (cuerpo) para más personalidad -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Brais Pérez Gómez</div>
+
+    <!-- Navegación (Sticky) -->
+    <header id="header">
+        <nav class="navbar">
+            <a href="#inicio" class="logo">BP.</a>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="pages/experiencia.html">Experiencia</a></li>
-                <li><a href="pages/proyectos.html">Proyectos</a></li>
-                <li><a href="pages/educacion.html">Educación</a></li>
-                <li><a href="pages/contacto.html">Contacto</a></li>
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+                <li><a href="#formacion" class="nav-link">Formación</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
         </nav>
     </header>
-    <main>
-        <section class="hero">
-            <h1>¡Hola! Soy Brais Pérez Gómez</h1>
-            <p>Graduado por la Universidade de Vigo en Comunicación Audiovisual. Me apasiona la animación, los videojuegos, el cine y la producción multimedia, al igual que los deportes como el fútbol.</p>
-            <a href="pages/proyectos.html" class="btn">Ver Mis Proyectos</a>
-        </section>
-        <section class="skills">
-            <h2>Aptitudes Principales</h2>
-            <div class="skills-grid">
-                <div class="skill-card">Trabajo en grupo avanzado</div>
-                <div class="skill-card">Adaptabilidad y resolución de problemas</div>
-                <div class="skill-card">Pensamiento crítico avanzado</div>
+
+    <!-- Sección Inicio (Hero) -->
+    <section id="inicio" class="hero section-spacing">
+        <div class="hero-content">
+            <span class="hero-greeting">Dando forma creativa a narrativas digitales</span>
+            <h1 class="hero-title">Brais Pérez Gómez</h1>
+            <h2 class="hero-subtitle">Graduado en Comunicación Audiovisual</h2>
+            <p class="hero-description">Especializado en aportar una visión cinematográfica y enfoque técnico a la producción audiovisual y creación digital.</p>
+            <a href="#proyectos" class="btn-primary">Ver proyectos</a>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí & Experiencia -->
+    <section id="sobre-mi" class="about section-spacing">
+        <div class="container">
+            <div class="about-grid">
+                <!-- Tarjeta Sobre Mí -->
+                <div class="about-card">
+                    <h2 class="section-title">Sobre mí</h2>
+                    <p>Soy un profesional apasionado por el mundo digital y la historia visual. Me interesa la intersección entre tecnología y arte para crear y transmitir experiencias inmersivas.</p>
+                    
+                    <h3 class="subsection-title">Intereses</h3>
+                    <div class="tags-container">
+                        <span class="tag">Animación</span>
+                        <span class="tag">Videojuegos</span>
+                        <span class="tag">Cine</span>
+                        <span class="tag">Deporte (Fútbol)</span>                        <span class="tag">Moda</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Aptitudes -->
+                <div class="about-card">
+                    <h2 class="section-title">Aptitudes destacadas</h2>
+                    <ul class="skills-list">
+                        <li><span class="skill-name">Trabajo en grupo</span> <span class="skill-lvl">Avanzado</span></li>
+                        <li><span class="skill-name">Adaptabilidad</span> <span class="skill-lvl">Avanzado</span></li>
+                        <li><span class="skill-name">Pensamiento crítico</span> <span class="skill-lvl">Avanzado</span></li>
+                        <li><span class="skill-name">Resolución de problemas</span> <span class="skill-lvl">Avanzado</span></li>
+                    </ul>
+                </div>
             </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 - Brais Pérez Gómez.</p>
+
+            <!-- Experiencia Integrada -->
+            <h2 class="section-title mt-top">Experiencia profesional</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Cadena Ser - Radio Pontevedra</h3>
+                        <p class="timeline-date">Prácticas formativas</p>
+                        <p>Funciones orientadas a la producción, redacción, control y locución a nivel local.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Invirte Subvenciones S.L.</h3>
+                        <p class="timeline-date">Prácticas profesionales</p>
+                        <p>Aplicación de conocimientos audiovisuales y comunicativos para el entorno corporativo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Formación e Idiomas -->
+    <section id="formacion" class="formation section-spacing bg-surface">
+        <div class="container">
+            <h2 class="section-title">Formación académica</h2>
+            <div class="education-card" style="margin-bottom: 1.5rem;">
+                <h3>Universidade de Santiago de Compostela (USC)</h3>
+                <p class="edu-degree">Grado en Periodismo</p>
+                <p class="edu-year">Cursando actualmente</p>
+            </div>
+            <div class="education-card">
+                <h3>Universidade de Vigo, Pontevedra</h3>
+                <p class="edu-degree">Grado en Comunicación Audiovisual</p>
+                <p class="edu-year">Graduación: 2024</p>
+            </div>
+
+            <h2 class="section-title mt-top">Idiomas</h2>
+            <div class="lang-grid">
+                <div class="lang-card">
+                    <h4>Español & Gallego</h4>
+                    <p>Nativos / C2</p>
+                </div>
+                <div class="lang-card">
+                    <h4>Francés</h4>
+                    <p>Avanzado / C1</p>
+                </div>
+                <div class="lang-card">
+                    <h4>Inglés</h4>
+                    <p>Intermedio / B1</p>
+                </div>
+                <div class="lang-card">
+                    <h4>Italiano & Portugués</h4>
+                    <p>Nociones básicas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="projects section-spacing">
+        <div class="container">
+            <h2 class="section-title">Portfolio de proyectos</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Garaxe Zombi</h3>
+                        <p>Rol: Ayudante de Dirección</p>
+                        <a href="https://youtu.be/oJsrAGOkjiI?si=QlQ-Q3CITFvUw9Nh" target="_blank" class="project-link">Ver en YouTube &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Desafío Peregrino</h3>
+                        <p>Rol: Guionista y Cámara</p>
+                        <a href="https://youtu.be/U7Hp0H34Rr4" target="_blank" class="project-link">Ver en YouTube &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Yougur de Coco</h3>
+                        <p>Rol: Guionista y Montador</p>
+                        <a href="https://youtu.be/oHHw4FeHb54?si=3-mx4ox_2UY8ruq8" target="_blank" class="project-link">Ver en YouTube &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Cocina con Bo</h3>
+                        <p>Rol: Cámara, Montador y Artista (StopMotion)</p>
+                        <a href="https://youtu.be/v2Ehcv_YMEI?si=DIktdNb5aV5ewrPV" target="_blank" class="project-link">Ver en YouTube &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>La Clave Musical</h3>
+                        <p>Rol: Cámara, Montador y Guionista</p>
+                        <a href="https://youtu.be/0gojF1C7oRQ" target="_blank" class="project-link">Ver en YouTube &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>The ROM Nexus</h3>
+                        <p>Plataforma Web (Multimedia y gaming)</p>
+                        <a href="https://theromnexus.com/" target="_blank" class="project-link">Visitar web &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="project-card outline-card">
+                    <div class="project-info">
+                        <h3>Miaulight</h3>
+                        <p>Videojuego en pre-alpha</p>
+                        <span class="status-badge" style="margin-bottom: 0.8rem;">En desarrollo</span><br>
+                        <a href="https://drive.google.com/drive/u/2/folders/1F7lu-fNaq0zhMEzFL3jLM3n9upJMLkBG" target="_blank" class="project-link">Ver carpeta en Drive &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contacto -->
+    <footer id="contacto" class="contact">
+        <div class="container contact-content">
+            <h2 class="contact-title">¿Trabajamos juntos?</h2>
+            <div class="contact-methods">
+                <div class="contact-item">
+                    <span class="icon">✉</span>
+                    <a href="mailto:braiswx@gmail.com">braiswx@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📞</span>
+                    <span>(34) 626 12 52 66</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📍</span>
+                    <span>Meis, Pontevedra</span>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 Brais Pérez Gómez. Todos los derechos reservados.</p>
+        </div>
     </footer>
-    <script src="js/main.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
